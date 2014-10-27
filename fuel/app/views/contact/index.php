@@ -11,6 +11,7 @@
 		<h1>ここに開始終了出来るページを配置</h1>
 	</header>
 	<div class="container">
+		<?php var_dump($results); ?>
 		<div>
 			<p>this is contact time system</p>
 		</div>

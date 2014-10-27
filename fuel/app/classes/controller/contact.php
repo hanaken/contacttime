@@ -10,6 +10,7 @@
  * @link       http://fuelphp.com
  */
 
+use \Model\Contact;
 /**
  * The Welcome Controller.
  *
@@ -30,7 +31,10 @@ class Controller_Contact extends Controller
 	 */
 	public function action_index()
 	{
-		return Response::forge(View::forge('contact/index'));
+		$results = Contact::get_results();
+		$view = View::forge('contact/index');
+		$view->results = $results;
+		return $view;
 	}
 
 	/**
